@@ -18,13 +18,11 @@ class Items extends Component {
     //console.log(this.state.itemsList);
     // this.setState( { itemsList: [...this.state.itemsList, {id: this.state.itemsList.length, valueText :this.state.myInputValue}] } ) // addItem on itemsList
     this.setState( { itemsList: [...this.state.itemsList, {id: uuidv4(), valueText :this.state.myInputValue}] } ) // addItem on itemsList
-    // console.log(this.state.itemsList);
     // this.state.myInputValue = "";
     this.setState({myInputValue: ""});
   };
 
   handleDelete = (id) => {
-    // alert("id deleted: " + id);
     const newItemList = this.state.itemsList.filter( (x) => x.id != id);
     this.setState({itemsList: newItemList});
   }
