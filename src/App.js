@@ -14,12 +14,14 @@ class App extends Component {
   render() {
   return (
     <div className="App">
+      <div className="todo-list">
         <div className="title">Todo List</div>
         <div className="content">
           <div className="items">
             <Items/>
           </div>
         </div>
+      </div>
     </div>
   );
   }
