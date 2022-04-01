@@ -38,11 +38,16 @@
 }
 
 
+.todo-list {
+  margin: 0px auto;
+  width: 35vw;
+}
+
 .title {
   background-color: rgb(255, 72, 0);
-  margin: 0px auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   margin-top: 30px;
-  width: 40vw;
   height: 40px;
   padding-top: 20px;
 }
@@ -50,15 +55,16 @@
 .items {
   background-color: rgb(255, 72, 0);
   margin: 0px auto;
+  border-radius: 10px;
   width: 25vw;
   padding: 10px 0;
 }
 
 .content {
   background-color: aqua;
-  width: 40vw;
-  margin: 0px auto;
-  padding: 10px 0;
+  padding: 20px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .title {
