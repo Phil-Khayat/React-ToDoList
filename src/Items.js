@@ -15,20 +15,18 @@ class Items extends Component {
   }
   
   handleAddItem = () => {
-
     if (this.state.myInputValue == "") {
         alert ("Vous devez rentrer un texte de Tâche !")
         return;
     }
 
-    if (this.state.itemsList.indexOf( (x) => x.valueText = this.state.myInputValue) >= 0) {
+    if (this.state.itemsList.find( x => x.valueText == this.state.myInputValue)) {
         alert ("La tâche " + this.state.myInputValue + " existe déjà dans la Todo List !")
         return;
     }
 
     // this.setState( { itemsList: [...this.state.itemsList, {id: this.state.itemsList.length, valueText :this.state.myInputValue}] } ) // addItem on itemsList
     this.setState( { itemsList: [...this.state.itemsList, {id: uuidv4(), valueText :this.state.myInputValue}] } ) // addItem on itemsList
-    // this.state.myInputValue = "";
     this.setState({myInputValue: ""});
   };
 
@@ -52,7 +50,7 @@ class Items extends Component {
         </div>
        
         { this.state.itemsList.map( (item) => (
-            <Item key={item.id} itemRow={item} onDelete={this.handleDelete}></Item>
+            <Item key={item.id} itemRow={item} onDelete={this.handleDelete} indexArray={this.state.itemsList.indexOf(item)+1}></Item>
         ))}
               
     </div>
