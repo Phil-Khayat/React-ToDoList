@@ -9,7 +9,7 @@ function Item ({indexArray, itemRow, onDelete}) {
   return (
     <div className="Item">        
         <span className="item-text">{indexArray} : {itemRow.valueText}</span>
-        <a id="trash" onClick={() => onDelete(itemRow.id)}><FontAwesomeIcon icon={faTrash} /> </a>
+        <a onClick={() => onDelete(itemRow.id)}><FontAwesomeIcon id="trash" icon={faTrash} /> </a>
     </div>
   );
 }

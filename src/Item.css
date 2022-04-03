@@ -9,10 +9,10 @@
     height: 30px;
     width: 80%;
 }
-#id {
+#trash {
     color: white;
 }
-#id:hover {
+#trash:hover {
     color: black;
 }
 #trash {
