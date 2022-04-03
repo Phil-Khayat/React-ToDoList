@@ -3,27 +3,15 @@ import './Item.css';
 import { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons' 
-// import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
-// import { faSolid, faTrashCan } from '@fortawesome/fontawesome-free-solid'
 
-class Item extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-      item: this.props.itemRow,
-    };
-  }
-  
-  render() {
+function Item ({indexArray, itemRow, onDelete}) {
+
   return (
-    <div className="Item">
-        {/* <span>{this.props.itemRow.id} : {this.props.itemRow.valueText}</span> */}
-        <span className="item-text">{this.props.indexArray} : {this.props.itemRow.valueText}</span>
-        <a onClick={() => this.props.onDelete(this.props.itemRow.id)}><FontAwesomeIcon id="trash" icon={faTrash} /> </a>
-        {/* <button onClick={() => this.props.onDelete(this.props.itemRow.id)}>Effacer</button> */}
+    <div className="Item">        
+        <span className="item-text">{indexArray} : {itemRow.valueText}</span>
+        <a id="trash" onClick={() => onDelete(itemRow.id)}><FontAwesomeIcon icon={faTrash} /> </a>
     </div>
   );
-  }
 }
 
 export default Item;

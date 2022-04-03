@@ -25,9 +25,7 @@ class Items extends Component {
         return;
     }
 
-    // this.setState( { itemsList: [...this.state.itemsList, {id: this.state.itemsList.length, valueText :this.state.myInputValue}] } ) // addItem on itemsList
-    this.setState( { itemsList: [...this.state.itemsList, {id: uuidv4(), valueText :this.state.myInputValue}] } ) // addItem on itemsList
-    this.setState({myInputValue: ""});
+    this.setState( { itemsList: [...this.state.itemsList, {id: uuidv4(), valueText :this.state.myInputValue}], myInputValue: "" } ) // addItem on itemsList
   };
 
   handleDelete = (id) => {
@@ -42,7 +40,7 @@ class Items extends Component {
         <div>
             <input type="text"
                 value={this.state.myInputValue}
-                onChange={e => this.setState({myInputValue: e.target.value})}
+                onChange={event => this.setState({myInputValue: event.target.value})}
                 placeholder="Renseignez un Item"
             ></input> 
             {/* <button id="add-item" onClick={this.handleAddItem}>Add Task</button> */}

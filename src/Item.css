@@ -9,8 +9,11 @@
     height: 30px;
     width: 80%;
 }
-FontAwesomeIcon {
+#id {
     color: white;
+}
+#id:hover {
+    color: black;
 }
 #trash {
     color: white;
